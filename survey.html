@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="survey.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+    </header>
+
+    <main>
+        <p id="description">What is your opinion on this survey form?</p>
+        <form id="survey-form" name="survey">
+            <br>
+            <fieldset id="info">
+                <legend>Tell me something about yourself.</legend>
+                <div class="question">
+                    <label id="name-label" for="name">Your name</label>
+                    <input id="name" type="text" placeholder="Type your name here" required>
+                </div>
+                <div class="question">
+                    <label id="email-label" for="email">Your email</label>
+                    <input id="email" type="email" placeholder="Type your email here" required>
+                </div>
+                <div class="question">
+                    <label id="number-label" for="number">Years of experience with CSS</label>
+                    <input id="number" type="number" min="0" max="30" placeholder="Type no. of years">
+                </div>
+                <div class="question">
+                    <label id="dropdown-test-label" for="dropdown-test">Where are you from (contintent)?</label>
+                    <input id="dropdown-test" list="continents">
+                    <datalist id="continents">
+                        <option value="Africa"></option>
+                        <option value="Asia"></option>
+                        <option value="Australia"></option>
+                        <option value="Europe"></option>
+                        <option value="North America"></option>
+                        <option value="South America"></option>
+                    </datalist>
+                </div>
+            </fieldset>
+            <br>
+            <fieldset id="questions">
+                <legend>Pick the answers that describe your thoughs about the site.</legend>
+                <div class="question">
+                    <label for="dropdown">How many examples should be shown?</label>
+                    <select id="dropdown">
+                        <option disabled="" selected="">Pick your answer</option>
+                        <option value="4 examples">4 examples</option>
+                        <option value="6 examples">6 examples</option>
+                        <option value="8 examples">8 examples</option>
+                        <option value="More">More</option>
+                    </select>
+                </div>
+                <div class="question-multiple">
+
+                    <label id="radio">What do you like most about the site</label>
+                    <div class="checkbox-items">
+                        <div>
+                            <input id="aspect" type="radio" name="radio-buttons" value="aspect">
+                            <label for="aspect">The aspect</label>
+                        </div>
+                        <div>
+                            <input id="functionality" type="radio" name="radio-buttons" value="functionality">
+                            <label for="functionality">The functionality</label>
+                        </div>
+                        <div>
+                            <input id="both" type="radio" name="radio-buttons" value="both">
+                            <label for="both">Both</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="question-multiple">
+                    <label id="checkbox">What changes would you like to be notified about?</label>
+                    <div class="checkbox-items">
+                        <div>
+                            <input id="aspect-notify" name="checkbox-buttons" type="checkbox" value="About the aspect">
+                            <label for="aspect-notify">About the aspect</label>
+                        </div>
+                        <div>
+                            <input id="functionality-notify" name="checkbox-buttons" type="checkbox" value="About the functionality">
+                            <label for="functionality-notify">About the functionality</label>
+                        </div>
+                        <div>
+                            <input id="examples-notify" name="checkbox-buttons" type="checkbox" value="About the examples">
+                            <label for="examples-notify">About the examples</label>
+                        </div>
+                        <div>
+                            <input id="all-notify" name="checkbox-buttons" type="checkbox" value="Whenever something changes" checked="checked">
+                            <label for="all-notify">Whenever something changes</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <br>
+            <fieldset id="comments">
+                <legend>What else would you like to see on this site?</legend>
+                <textarea id="comment" name="message" rows="5" placeholder="Write here what else would you like to see on this site."></textarea>
+            </fieldset>
+
+            <button id="submit" form="survey-form">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Made by
+            <a href="https://codepen.io/Nei_V" target="_blank">Nei V.</a>
+        </p>
+        <div id="contact">
+            <a href="https://www.facebook.com/varsescu.ion" target="_blank">
+                <i class="fa fa-facebook-square fa-3x"></i>
+            </a>
+            <a href="https://twitter.com/IonVcoding" target="_blank">
+                <i class="fa fa-twitter fa-3x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ionvarsescu/" target="_blank">
+                <i class="fa fa-linkedin fa-3x"></i>
+            </a>
+            <a href="https://plus.google.com/100730160336168112160" target="_blank">
+                <i class="fa fa-google-plus fa-3x"></i>
+            </a>
+            <a href="https://github.com/Nei-V" target="_blank">
+                <i class="fa fa-github fa-3x"></i>
+            </a>
+            <a href="https://www.freecodecamp.org/portfolio/nei-v" target="_blank">
+                <img src="https://res.cloudinary.com/dg45lvfuu/image/upload/v1465845327/fcc-app-icon_gqbnku.png">
+            </a>
+    </footer>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
